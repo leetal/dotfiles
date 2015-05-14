@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 ## First make sure we have installed zsh and curl!
