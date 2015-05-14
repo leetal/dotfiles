@@ -1,4 +1,5 @@
 #!/bin/bash
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 ## Jump to home
 cd
@@ -27,5 +28,5 @@ source $HOME/.zsh/prompt
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting" >> ~/.zshrc
 
 ## Restart everything!
-ScriptLoc=$(readlink -f "setup.sh")
+ScriptLoc=$(readlink -f "$DIR/setup.sh")
 exec $ScriptLoc
