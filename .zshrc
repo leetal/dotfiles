@@ -18,5 +18,3 @@ export PATH=~/.bin/:/usr/local/bin/:$PATH
 source $HOME/.zsh/aliases
 source $HOME/.zsh/functions
 source $HOME/.zsh/prompt
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
