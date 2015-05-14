@@ -25,5 +25,5 @@ source $HOME/.zsh/prompt\n
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting" >> ~/.zshrc
 
 ## Restart everything!
-ScriptLoc=$(readlink -f "$0")
+ScriptLoc=$(readlink -f "setup.sh")
 exec $ScriptLoc
