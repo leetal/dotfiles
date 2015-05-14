@@ -1,0 +1,72 @@
+function g {
+  if [[ $# > 0 ]]; then
+    /usr/bin/git $@
+  else
+    /usr/bin/git status
+  fi
+}
+
+# Grep through the `ls -l` list
+function lgrep {
+  if [[ $# == 0 ]]; then
+    echo "Usage: lgrep <something to grep against>"
+  else
+    ls -l | grep "$*"
+  fi
+}
+
+# Git functions
+function gfb {
+  if [[ $# == 0 ]]; then
+    echo "Usage: gfb <feature-branch>"
+  else
+    git fetch --all
+    git pull
+    git checkout -b $1
+    git push -u origin $1
+  fi
+}
+
+function ga {
+  if [[ $# == 0 ]]; then
+    git add -u
+  else
+    git add $*
+  fi
+}
+
+function gcm {
+  if [[ $# == 0 ]]; then
+    echo "Usage: gcm <commit-message>"
+  else
+    git commit -m "$*"
+  fi
+}
+
+function take {
+  if [[ $# == 0 ]]; then
+    echo "Usage: take <folder-name>"
+  else
+    mkdir -p $1;
+    cd $1;
+  fi
+}
+
+# pick is awesome
+function hgrep {
+  `history -1000 | pick | cut -c 8-`
+}
+
+# Counts the lines of a given file (excluding folders)
+function count {
+  if [[ $# == 0 ]]; then
+    echo "Usage: count <file(s)>"
+  else
+    for var in "$@"; do
+      if [ ! -d $var ]; then
+        echo "# $var \t $( cat $var | wc -l ) lines"
+      fi
+    done
+  fi
+}
+

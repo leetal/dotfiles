@@ -1,0 +1,5 @@
+# I'm a fan of colors
+autoload -U colors && colors
+
+PROMPT="%~ as %n at %m
+λ "

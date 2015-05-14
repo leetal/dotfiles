@@ -1,0 +1,20 @@
+#! /bin/sh
+#github/bzf/dotfiles
+
+PLATFORM=`uname -s`
+
+# Platform specific values
+if [ $PLATFORM = 'Linux' ]; then
+  LS_COLOR='--color'
+else
+  LS_COLOR='-G'
+fi
+
+alias dots="cd $HOME/.dotfiles/"
+alias l="ls -lh $LS_COLOR"
+alias la="ls -lAh $LS_COLOR"
+alias tpwd="tmux new -s `basename $PWD`"
+alias gd="git diff"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset \
+  %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias u='cd ..'
