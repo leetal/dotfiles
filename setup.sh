@@ -13,15 +13,17 @@ rsync -av --progress --exclude-from 'exclude-list.txt' .* ~/
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 ## Append to our .zshrc file written by oh-my-zsh
-echo "\n\n# Enable vi-mode\n
-bindkey -v\n
-export KEYTIMEOUT=1\n
-# Add some PATH variables\n
-export PATH=~/.bin/:/usr/local/bin/:$PATH\n
-# Sourcing from other files\n
-source $HOME/.zsh/aliases\n
-source $HOME/.zsh/functions\n
-source $HOME/.zsh/prompt\n
+echo "
+
+# Enable vi-mode
+bindkey -v
+export KEYTIMEOUT=1
+# Add some PATH variables
+export PATH=~/.bin/:/usr/local/bin/:$PATH
+# Sourcing from other files
+source $HOME/.zsh/aliases
+source $HOME/.zsh/functions
+source $HOME/.zsh/prompt
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting" >> ~/.zshrc
 
 ## Restart everything!
