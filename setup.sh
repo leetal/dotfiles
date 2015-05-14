@@ -5,7 +5,7 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 sudo apt-get -y --force-yes install zsh curl tput
 
 ## This will setup all the dotfiles where they belong!
-rsync -av --progress --exclude-from 'exclude-list.txt' .* ~/
+rsync -av --progress --exclude-from '${DIR}/exclude-list.txt' .* ~/
 
 ## Jump to home
 pushd .
@@ -15,7 +15,7 @@ cd
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 ## Append to our .zshrc file written by oh-my-zsh
-cat "$DIR/.zshrc" >> ~/.zshrc
+cat "${DIR}/.zshrc" >> ~/.zshrc
 
 ## Return to old dir
 popd
