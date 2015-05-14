@@ -30,6 +30,10 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting" >> ~/.zshrc
 
 popd
 
-## Restart everything!
-ScriptLoc=$(readlink -f "$DIR/setup.sh")
-exec $ScriptLoc
+echo "\033[0;32m"' _____          _        _ _          _ '"\033[0m"
+echo "\033[0;32m"'|_   _|        | |      | | |        | |'"\033[0m"
+echo "\033[0;32m"'  | | _ __  ___| |_ __ _| | | ___  __| |'"\033[0m"
+echo "\033[0;32m"'  | || '_ \/ __| __/ _` | | |/ _ \/ _` |'"\033[0m"
+echo "\033[0;32m"' _| || | | \__ \ || (_| | | |  __/ (_| |'"\033[0m"
+echo "\033[0;32m"' \___/_| |_|___/\__\__,_|_|_|\___|\__,_|'"\033[0m"
+echo "\033[0;32m"'                                        '"\033[0m"
