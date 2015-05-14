@@ -21,7 +21,7 @@ cat "$DIR/.zshrc" >> ~/.zshrc
 popd
 
 ## Print ze fancy textz!
-green=`tput setaf 2`
+green=`tput setaf 2 bold`
 reset=`tput sgr0`
 
 echo "${green} _____          _        _ _          _ ${reset}"
