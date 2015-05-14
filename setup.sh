@@ -5,7 +5,7 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 sudo apt-get -y --force-yes install zsh curl tput
 
 ## This will setup all the dotfiles where they belong!
-rsync -av --progress --exclude-from '${DIR}/exclude-list.txt' .* ~/
+rsync -av --progress --exclude-from 'exclude-list.txt' .* ~/
 
 ## Jump to home
 pushd .
