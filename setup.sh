@@ -2,7 +2,7 @@
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 ## First make sure we have installed zsh and curl!
-sudo apt-get -y --force-yes install zsh curl tput
+sudo apt-get -y --force-yes install zsh curl tmux
 
 ## This will setup all the dotfiles where they belong!
 rsync -av --progress --exclude-from 'exclude-list.txt' .* ~/
